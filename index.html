@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Number Processor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Change Number Processor</h2>
+        <form id="changeForm">
+            <label for="bearerToken">Enter Confluence Bearer Token:</label>
+            <input type="text" id="bearerToken" name="bearerToken" placeholder="Bearer Token" required>
+            
+            <label for="iceToken">Enter ICE Basic Token:</label>
+            <input type="text" id="iceToken" name="iceToken" placeholder="ICE Basic Token" required>
+
+            <label for="changeNumbers">Enter Change Numbers (comma-separated):</label>
+            <input type="text" id="changeNumbers" name="changeNumbers" placeholder="e.g. CHG123456, CR7654321" required>
+
+            <button type="submit">Process</button>
+        </form>
+        <div id="results" class="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
